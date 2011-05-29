@@ -1,0 +1,230 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD220F021391F32A00099194 /* pandaboot.c in Sources */ = {isa = PBXBuildFile; fileRef = DD220F011391F32A00099194 /* pandaboot.c */; };
+		DD220F101391FCAF00099194 /* libusb-1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD220F0F1391FCAF00099194 /* libusb-1.0.a */; };
+		DD220F121391FCBD00099194 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD220F111391FCBD00099194 /* CoreFoundation.framework */; };
+		DD220F141391FCC600099194 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD220F131391FCC600099194 /* IOKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DD220EFB1391F32A00099194 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DD220EFD1391F32A00099194 /* pandaboot */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pandaboot; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD220F011391F32A00099194 /* pandaboot.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pandaboot.c; sourceTree = "<group>"; };
+		DD220F0B1391F6A100099194 /* libusb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libusb.h; sourceTree = "<group>"; };
+		DD220F0F1391FCAF00099194 /* libusb-1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libusb-1.0.a"; sourceTree = "<group>"; };
+		DD220F111391FCBD00099194 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		DD220F131391FCC600099194 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD220EFA1391F32A00099194 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD220F141391FCC600099194 /* IOKit.framework in Frameworks */,
+				DD220F121391FCBD00099194 /* CoreFoundation.framework in Frameworks */,
+				DD220F101391FCAF00099194 /* libusb-1.0.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD220EF21391F32A00099194 = {
+			isa = PBXGroup;
+			children = (
+				DD220F091391F6A100099194 /* libusb */,
+				DD220F001391F32A00099194 /* pandaboot */,
+				DD220EFE1391F32A00099194 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD220EFE1391F32A00099194 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD220EFD1391F32A00099194 /* pandaboot */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD220F001391F32A00099194 /* pandaboot */ = {
+			isa = PBXGroup;
+			children = (
+				DD220F011391F32A00099194 /* pandaboot.c */,
+			);
+			path = pandaboot;
+			sourceTree = "<group>";
+		};
+		DD220F091391F6A100099194 /* libusb */ = {
+			isa = PBXGroup;
+			children = (
+				DD220F131391FCC600099194 /* IOKit.framework */,
+				DD220F111391FCBD00099194 /* CoreFoundation.framework */,
+				DD220F0F1391FCAF00099194 /* libusb-1.0.a */,
+				DD220F0B1391F6A100099194 /* libusb.h */,
+			);
+			path = libusb;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD220EFC1391F32A00099194 /* pandaboot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD220F061391F32A00099194 /* Build configuration list for PBXNativeTarget "pandaboot" */;
+			buildPhases = (
+				DD220EF91391F32A00099194 /* Sources */,
+				DD220EFA1391F32A00099194 /* Frameworks */,
+				DD220EFB1391F32A00099194 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = pandaboot;
+			productName = pandaboot;
+			productReference = DD220EFD1391F32A00099194 /* pandaboot */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD220EF41391F32A00099194 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Intunity Pty Ltd";
+			};
+			buildConfigurationList = DD220EF71391F32A00099194 /* Build configuration list for PBXProject "pandaboot" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DD220EF21391F32A00099194;
+			productRefGroup = DD220EFE1391F32A00099194 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD220EFC1391F32A00099194 /* pandaboot */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD220EF91391F32A00099194 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD220F021391F32A00099194 /* pandaboot.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DD220F041391F32A00099194 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DD220F051391F32A00099194 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DD220F071391F32A00099194 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/libusb\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DD220F081391F32A00099194 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/libusb\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD220EF71391F32A00099194 /* Build configuration list for PBXProject "pandaboot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD220F041391F32A00099194 /* Debug */,
+				DD220F051391F32A00099194 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD220F061391F32A00099194 /* Build configuration list for PBXNativeTarget "pandaboot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD220F071391F32A00099194 /* Debug */,
+				DD220F081391F32A00099194 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD220EF41391F32A00099194 /* Project object */;
+}
