@@ -12,9 +12,6 @@
 #include <sys/stat.h>
 #include "libusb.h"
 
-extern unsigned char *aboot_data;
-extern unsigned aboot_size;
-
 void get_asic(libusb_device_handle *handle) {
 #pragma pack(1)
     struct st_asic {
@@ -36,6 +33,34 @@ void get_asic(libusb_device_handle *handle) {
 }
 
 char *get_builtin_image(off_t *length) {
+    /*
+     * Copyright (C) 2010 The Android Open Source Project
+     * All rights reserved.
+     *
+     * Redistribution and use in source and binary forms, with or without
+     * modification, are permitted provided that the following conditions
+     * are met:
+     *  * Redistributions of source code must retain the above copyright
+     *    notice, this list of conditions and the following disclaimer.
+     *  * Redistributions in binary form must reproduce the above copyright
+     *    notice, this list of conditions and the following disclaimer in
+     *    the documentation and/or other materials provided with the 
+     *    distribution.
+     *
+     * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+     * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+     * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+     * FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+     * COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+     * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+     * BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS
+     * OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED 
+     * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+     * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
+     * OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+     * SUCH DAMAGE.
+     */
+    // refer to https://github.com/swetland/omap4boot
     static char bytes[] = {
         0x08,0x70,0x4f,0xe2,0x28,0x80,0x8f,0xe2,0x00,0x80,0x98,0xe5,0x07,0x70,0x88,0xe0,
         0x30,0x80,0x9f,0xe5,0x30,0x90,0x9f,0xe5,0x04,0x60,0x17,0xe4,0x04,0x60,0x09,0xe4,
@@ -549,7 +574,7 @@ int send_image(libusb_device_handle *handle, char *image, int length) {
     
     uint32_t msg_sendimage = 0xF0030002;
     int err = libusb_bulk_transfer(handle, 0x01, (unsigned char *)&msg_sendimage, sizeof(msg_sendimage), &sent_length, 0);
-    err = libusb_bulk_transfer(handle, 0x01, (unsigned char *)&aboot_size, sizeof(aboot_size), &sent_length, 0);
+    err = libusb_bulk_transfer(handle, 0x01, (unsigned char *)&length, sizeof(length), &sent_length, 0);
     
     err = libusb_bulk_transfer(handle, 0x01, image, length, &sent_length, 0);
     
